@@ -5,9 +5,7 @@
 
 echo "Running update-postman-env-file.sh"
 
-api_gateway_url=`aws cloudformation describe-stacks \
-  --stack-name petstore-api-stack \
-  --query "Stacks[0].Outputs[*].{OutputValueValue:OutputValue}" --output text`
+api_gateway_url=https://65cc5k2rf6.execute-api.eu-west-2.amazonaws.com/prod
 
 echo "API Gateway URL:" ${api_gateway_url}
 
